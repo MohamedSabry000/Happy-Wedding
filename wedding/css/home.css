@@ -1,0 +1,370 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 87px;
+    /*overflow: hidden;                              /*clear The Scroll Bar that in the Right of Website*/ 
+    /*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-image: url('../img/happy/the-heart-body.png');
+    background-position: center top;
+    background-repeat: repeat;
+    margin-bottom: -20px;
+}
+
+/* overriding Bootstrap */
+.navbar {
+    min-height: 87px;
+    border: none;
+    box-shadow: 0px 5px 26px #CCC;
+}
+.navbar-default {
+    background-color: #ffffff;
+    border-color: #ffffff;
+}
+@media (min-width: 992px){
+    .container {
+        min-height: 87px;
+    }
+}
+@media (min-width: 768px){
+    .navbar-nav > li > a {
+        min-height: 86px;
+        line-height: 56px;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        min-height: 87px;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand img{
+        width: 167px;
+    }
+    .navbar-nav li{
+        line-height: 86px;
+    }
+    .navbar-nav li button, .web-heading button, .page-demo button{
+        line-height: 86px;
+        padding: 5px 20px;
+        color: #fff;
+        background-color: #c52425;
+        line-height: 1.82857143;
+        font-size: 22px;
+        border: 1px solid #c52425;
+        transition: all 0.5s ease-in-out;
+    }
+    .navbar-nav li button:hover, .web-heading button:hover, .page-demo button:hover{ 
+        color: #c52425;
+        background-color: #fff;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+        color: #cc0c0c;
+        background: none;
+    }
+}
+@media (max-width: 767px){
+    .navbar-nav > li > a {
+        line-height: 29px;
+        min-height: 29px;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+        min-height: 87px;
+    }
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand img{
+        width: 167px;
+    }
+    .navbar-nav li{
+        line-height: 60px;
+    }
+    .navbar-nav li:last-child{
+        text-align: center;
+    }
+    .navbar-nav li button{
+        padding: 5px 20px;
+        color: #fff;
+        background-color: #c52425;
+        line-height: 1.2;
+        font-size: 18px;
+        border: 1px solid #c52425;
+        transition: all 0.5s ease-in-out;
+    }
+    .navbar-nav li button:hover{ 
+        color: #c52425;
+        background-color: #fff;
+    }
+    .navbar-toggle {
+        margin-top: 28px;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+        color: #cc0c0c;
+        background: none;
+        line-height: 29px;
+    }
+}
+.navbar-default .navbar-nav > li > a{
+    color: #cc0c0c;
+}
+.navbar-brand {
+    padding: 0px 15px;
+}
+.nav li > a{
+    font-size: 1.4em;
+    font-weight: 400;
+    text-transform: capitalize;
+    transition: all 0.4s ease 0s;
+}
+/**************************************      Start Web Heading       ************************************/
+
+.web-heading{
+    position: relative;
+    background-image: url('../img/happy/love-bg3.jpg');
+    background-color: #FFF;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    width: 100%;
+    min-height: 586px;
+    max-height: 600px;
+    transition: all 0.4s ease-in-out;
+}
+.web-heading .background-img{
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+}
+.web-heading .header-container{
+    height: 566px;
+}
+.web-heading .header-container h1{
+    font-family: 'Great Vibes', cursive;
+    font-size: 6.667em;
+    line-height: 566px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: -216px;
+}
+.web-heading .header-container p{
+    color: #FFF;
+    font-size: 1.667em;
+    font-weight: bold;
+    line-height: 86px;
+}
+
+                     /************  Animation heart    *************/
+.tiny-heart {
+    position: absolute;
+    opacity: 0;
+    background-color: #96327D;
+    box-shadow: 0px 0px 50px 4px rgba(150, 50, 125, 0.7);
+    animation: animated-heart infinite ease-in;
+}
+.tiny-heart:before {
+    transform: translateX(-50%);
+}
+.tiny-heart:before, .tiny-heart:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #96327D;
+}
+
+.tiny-heart:after {
+    transform: translateY(-50%);
+}
+.tiny-heart:before, .tiny-heart:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #96327D;
+}
+@keyframes animated-heart{
+    0% {
+        opacity: 0;
+        transform: translate(0, 0) rotate(45deg);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(0, -40%) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -1000%) rotate(45deg);
+    }
+}
+.web-heading button{
+    border-radius: 25px;
+    width: 199px;
+    background-color: #C522AE;
+    border: 1px solid #C522AE;
+}
+.page-demo h2{
+    font-family: 'Great Vibes', cursive;
+    line-height: 155px;
+    font-weight: bold;
+    color: #C522AE;
+    font-size: 50px;
+}
+.page-demo .webpage-screen{
+    padding: 20px;
+    height: 382px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0px 0px 33px 14px #CCC;
+    border-radius: 40px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 20px;
+    position: relative;
+    background-position: center center;
+    transition: all 1s ease-in-out;
+}
+.page-demo .webpage-screen img{
+    transform: scale(1.1);
+    border-radius: 64px;
+}
+.page-demo .webpage-screen figcaption{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    width: 96%;
+    border-radius: 10px;
+    line-height: 100%;
+    height: 96%;
+    background: rgba(255,255,255,0);
+    transition: all 0.7s ease-in-out;
+    border: 1px solid rgba(0,0,0,0);
+}
+.page-demo .webpage-screen figcaption h4{
+    font-family: 'Great Vibes', cursive;
+    margin-top: 33%;
+    font-size: 47px;
+    font-weight: bold;
+    color: rgba(255,255,255,0);
+    transition: all 0.7s ease-in-out;
+}
+.page-demo .webpage-screen:hover figcaption{
+    background: rgba(255,255,255,0.6);
+    border: 1px solid #96327D;
+}
+.page-demo .webpage-screen:hover h4{
+    color: #96327D;
+    -webkit-transform: translateY(-8px);
+    transform: translateY(-8px);
+}
+.page-demo .page-content-left, .page-demo .page-content-right{
+    text-align: justify;
+    margin-top: -14px;
+    color: #952B86;
+    padding-left: 17px;
+    width: 96%;
+}
+.page-demo .page-content-left h3:after, .page-demo .page-content-right h3:after{
+    content: "";
+    background: url('../img/happy/page-content-after.png');
+    width: 45%;
+    background-size: contain;
+    height: 18px;
+    display: block;
+    margin-left: 6px;
+    background-repeat: no-repeat;
+}
+.page-demo .page-content-left span, .page-demo .page-content-right span{
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.page-demo button{
+    border-radius: 25px;
+    width: 199px;
+    background-color: #C522AE;
+    border: 1px solid #C522AE;
+    margin-top: 1px;
+}
+footer{
+    width: 100%;
+    min-height: 600px;
+    max-height: 650px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../img/happy/happy-1518996193782-7361.jpg');
+    background-position: center center;
+    margin-bottom: 0;
+}
+footer .footer-front-end{
+    width: 100%;
+    min-height: 600px;
+    max-height: 650px;
+    background-color: rgba(0,0,0,0.4);
+    line-height: 155px;
+    padding-top: 15%;
+}
+footer .footer-front-end h4{
+
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+    color: rgba(255,255,255,0.6);
+    font-size: 8em;
+}
+footer .footer-front-end p{
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: bold;
+}
+/*-----------------------       Start Loading Overlay Section   --------------------------*/
+.loading-overlay
+{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.loading-overlay{
+    background-image: url('../img/happy/the-heart-body.png');
+    background-position: center top;
+    background-repeat: repeat;
+    margin-bottom: -20px;
+    color: #FFF;
+    position: fixed;
+    z-index: 99999;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+/*-----------------------       End Loading Overlay Section   --------------------------*/
+/*-----------------------       Start Scroll Top Section   ---------------------*/
+#scroll-top{
+    bottom: 17px;
+    right: 17px;
+    width: 35px;
+    height: 35px;
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.tiny-heart#scroll-top {
+    opacity: 1;
+    transform: rotate(-135deg);
+}
+#scroll-top:hover{
+    -webkit-transform: rotate(-135deg) scale(1.4) translate(13px);
+    transform: rotate(-135deg) scale(1.2) translate(13px);
+    }
+/*-----------------------       End Scroll Top Section   ---------------------*/
